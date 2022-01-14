@@ -47,15 +47,13 @@ border-bottom: 0px;
     border:2px solid rgb(241, 241, 208);
 }
 .Another_header{
-display: inline-block;
-height: 31%;
-width:40%;    
-border: 1px solid blue;
+    display: inline-block;
+    height: -50%;
+    transform:translate(-270%,-300%);
 }
 .Profile_image{
     display: inline-block;
-    border: 1px solid red;
-
+    width: 60%;
 }
 .Profile_image form input{
 background-color: slategrey;
@@ -63,7 +61,7 @@ border-radius: 0px;
 }
 .Profile_image img{
     border: 2px solid black;
-width: 10%;
+width: 16%;
 height: auto;
 padding:29px;
 }
