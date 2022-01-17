@@ -56,14 +56,14 @@ border-bottom: 0px;
     width: 60%;
 }
 .Profile_image form input{
-background-color: slategrey;
-border-radius: 0px;
+    background-color: slategrey;
+    border-radius: 0px;
 }
 .Profile_image img{
     border: 2px solid black;
-width: 16%;
-height: auto;
-padding:29px;
+    width: 16%;
+    height: auto;
+    padding:29px;
 }
 .Proto_Files{
     position: absolute;
@@ -105,3 +105,22 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 300;
 }
+
+/*Bootstrap*/
+
+/*Headers*/
+
+
+.navbar-light .navbar-brand img{
+    width: 70px;
+    height: auto;
+}
+
+.bg-light{
+    height: 100px;
+}
+
+
+/*Headers*/
+
+/*Bootstrap*/
