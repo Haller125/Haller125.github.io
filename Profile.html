@@ -23,12 +23,12 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="index.html"><img src="./Images/aitu-logo_.png" alt=""></a>
+              <a class="navbar-brand" href="index.html" style="margin-left: 2rem;"><img src="./Images/aitu-logo_.png" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="Profile.html">Profile</a>
                   </li>
@@ -37,9 +37,6 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="Mail.html">Mail</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Messenger.html">Messenger</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="Calculator.html">Calculator</a>
@@ -67,24 +64,78 @@
             
         </div>
         -->
-        <div class="Main_Page">
-                <div class="Proto_Profile">
-                    <div class="Profile_image">
-                        <figure>
-                        <img src="./Images/Фото 3x4.jpg" alt="">
-                        </figure>
-                        <form action="">
-                            <input type="submit" value = "Change photo">
-                            <input type="submit" value = "Download photo">
-                        </form>
+        <div class="Container">
+          <div class="Main_Page">
+            <div class="row">
+              <div class="col-md-4 mt-1">
+                <div class="card text-center sidebar">
+                  <div class="card-body">
+                    <img src="./Images/Фото 3x4.jpg" alt="" height="auto" width="250px">
+                    <div class="mt-3">
+                      <h3>Altynbek Alibekov</h3>
+                      <a href="#">Settings</a>
+                      <a href="#">Logout</a>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 mt-1">
+                <div class="card mb-3 content">
+                  <div class="m-3 pt-3">Information</div>
+                  <div class="card-body">
+                    <div class="row"> 
+                      <div class="col-md-3">
+                        <h5>Full name</h5>
+                      </div>
+                      <div class="col-md-9 text-secondary">
+                        *Full Name*
+                      </div>
+                      <hr>
+                      <div class="row"> 
+                        <div class="col-md-3">
+                          <h5>Group</h5>
+                        </div>
+                        <div class="col-md-9 text-secondary">
+                          *Group*
+                        </div>
+                        <hr>
+                      <div class="row"> 
+                        <div class="col-md-3">
+                          <h5>Email</h5>
+                        </div>
+                        <div class="col-md-9 text-secondary">
+                          *Email*
+                        </div>
+                        <hr>
+                        <div class="row"> 
+                          <div class="col-md-3">
+                            <h5>Phone</h5>
+                          </div>
+                          <div class="col-md-9 text-secondary">
+                            *Phone*
+                          </div>
+                          <hr>
+                        </div>
+                      </div>
                     </div>
-                    <div class="Another_header">
-                        <h2>Alibekov Altynbek
-                            <br> <hr> IT-2107
-                        </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 content">
+                <div class="m-3 pt-3">Teams</div>
+                <div class="card-body">
+                  <div class="row"> 
+                    <div class="col-md-3">
+                      <h5>Web</h5>
+                    </div>
+                    <div class="col-md-9 text-secondary">
+                      Group 5
                     </div>
                 </div>
-        </div>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
 </body>
 </html>
