@@ -15,138 +15,373 @@
 <link href="https://fonts.googleapis.com/css2?family=Pushster&family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }:root{
+        --grad:linear-gradient(to bottom right, #65cee9, #6961ad);
+        --clip:  polygon(52% 65%, 100% 38%, 100% 0, 0 0, 0% 38%);
+        --shadow:rgba(83, 172, 255, 0.623) 0px 30px 60px -12px, rgba(83, 172, 255, 0.623) 0px 18px 36px -18px;
+        --c:#8a9ab854;
+        --g:#bed7f3;
+    } @font-face {
+        src:url("q.ttf");
+        font-family: f;
+    }/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+    .top{
+        height: 90vh;
+        background-image: var(--grad);
+        width:100%;
+        clip-path:var(--clip) ;
+    }.box{
+        width: 1200px;
+        height: 800px;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        position: absolute; top:70%;
+        background: white;
+        left: 50%;
+        display: flex;
+        transform :translate(-50% , -50%);
+    }.left{
+       width: 400px;
+       height: 800px;
+       border-right:1px solid var(--c);
+    }.right{
+      height: 1000px;
+      width:calc(1000px - 280px);
+    }.topp{
+    width: 400px;
+    height: 120px;
+    display: flex;
+    border-bottom: 1px solid var(--c);
+    justify-content: space-around;
+    align-items: center;
+    }.search{
+    width: 400px;
+    height: 70px;
+    display: flex;
+    border-bottom: 1px solid var(--c);
+    justify-content: space-around;
+    align-items: center;
+    }h2{font-family: f;}
+    .ico {background: var(--g);
+          padding: 5px;
+          border-radius: 5px;}
+    .icon1 {
+        width: 40px; 
+        height: 40px;
+    }.in{
+      border: none;
+      outline: none;
+      background: var(--c);
+      padding: 10px 15px;
+      border-radius: 5px;
+      width: 280px;
+    }.ava{
+      height: 50px;
+      width: 50px;
+      margin-left: 0px;
+      border-radius: 30px;
+    }li{
+      list-style: none;
+    }.friend{
+      display: flex;
+      align-items: center;
+      transition: 0.5s ease;
+      height: 115px;
+      border-bottom: 1px solid var(--c);
+      justify-content: space-between;
+     
+    }.img_name{
+       display: flex;
+       align-items: flex-start;
+    }h5{
+      font-size: 20px;
+      font-family: f; 
+      margin-left: 12px;
+    }p{
+      margin-left: 12px;
+      color: grey;
+      font-family: f;
+      font-size: 15px;
+    }.p{
+      margin-right: 10px;
+    }.friend:hover{
+      background: var(--c);
+    }.ul{
+      height: 600px;
+      overflow-y: auto;
+    }.AlmUl{
+      height: 600px;
+      overflow-y: auto;
+    }
+    span{
+      color: green;
+    }.right_top{
+      height: 80px;
+      border-bottom: 1px solid var(--c);
+      width: 800px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }.mid{
+      overflow-y: auto;
+      width: 111%;
+      height: 660px;
+      border-bottom: 1px solid var(--c);
+    }.btm{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 110%;
+    }form{
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid lightgray;
+    }icon3,form div{
+      background: var(--g);
+      padding: 12px;
+      color: white;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }.send{
+      height: 20px;
+      width: 20px;
+    }.in2{
+      border: none;
+      outline: none;
+      background: transparent;
+      font-family: f;
+      width: 620px;
+    }.me{
+      margin: 10px;
+      background: var(--g);
+      display: table;
+      clear: both;
+      padding: 10px;
+      max-width: 80%;
+      border-radius: 5px;
+      float: right;
+    }.u{
+      margin: 10px;
+      background: grey;
+      display: table;
+      clear: both;
+      float: left;
+      padding: 10px;
+      max-width: 80%;
+      border-radius: 5px;
+    }.me p{
+      color: white;
+      font-size: 14px;
+    }.u p{
+      color: white;
+      font-size: 14px;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<body class="BgImage">
 
     <div class="Main">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html" style="margin-left: 2rem;"><img src="./Images/aitu-logo_.png" alt=""></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Profile.html">Profile</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="News.html">News</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Mail.html">Mail</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Calculator.html">Calculator</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Documents.html">Documents</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        <!--
-        <div class="Header">
-            
-            <div class = "Blocks">
-                
-                <div><a href="Main.html"><img src="./Images/aitu-logo_.png" alt=""></a></div>
-                <div><a href="Profile.html"><h3>Profile</h3></a></div>
-                <div><a href="News.html"><h3>News</h3></a></div>
-                <div><a href="Mail.html"><h3>Mail</h3></a></div>
-                <div><a href="Messenger.html"><h3>Messenger</h3></a></div>
-                <div><a href="Calculator.html"><h3>Calculator</h3></a></div>
-                <div><a href="Documents.html"><h3>Documents</h3></a></div>
-            </div>
-            
-        </div>
-        -->
-        
-        <div class="Main_Page">
-          <div class="table-responsive">
-            <table class="table">
-              <tbody><tr>
-                <td class="action"><input type="checkbox" /></td>
-                <td class="action"><i class="fa fa-star-o"></i></td>
-                <td class="action"><i class="fa fa-bookmark-o"></i></td>
-                <td class="name"><a href="#">Altynbek Alibekov</a></td>
-                <td class="subject"><a href="#">Invitation to the biggest comptetion in CS:GO</a></td>
-                <td class="time">08:30 PM</td>
-              </tr>
-              <tr>
-                <td class="action"><input type="checkbox" /></td>
-                <td class="action"><i class="fa fa-star-o"></i></td>
-                <td class="action"><i class="fa fa-bookmark"></i></td>
-                <td class="name"><a href="#">Ergali Kabash</a></td>
-                <td class="subject"><a href="#">2 Files</a></td>
-                <td class="time">06:33 PM</td>
-              </tr>
-              <tr class="read">
-                <td class="action"><div class="icheckbox_square-blue" st<td class="action"><input type="checkbox" /></td>
-                <td class="action"><i class="fa fa-star"></i></td>
-                <td class="action"><i class="fa fa-bookmark"></i></td>
-                <td class="name"><a href="#">Almira Toktasyn</a></td>
-                <td class="subject"><a href="#">English courses by Dernarndio Dolnez</a></td>
-                <td class="time">01:39 AM</td>
-              </tr>
-              <tr>
-                <td class="action"><input type="checkbox" /></td>
-                <td class="action"><i class="fa fa-star-o"></i></td>
-                <td class="action"><i class="fa fa-bookmark-o"></i></td>
-                <td class="name"><a href="#">Aziza Zainullina</a></td>
-                <td class="subject"><a href="#">Invitation to the cooking club!</a></td>
-                <td class="time">14:01 AM</td>
-              </tr>
-              <tr class="read">
-                <td class="action"><input type="checkbox" /></td>
-                <td class="action"><i class="fa fa-star-o"></i></td>
-                <td class="action"><i class="fa fa-bookmark-o"></i></td>
-                <td class="name"><a href="#">Arsen Omarbekov</a></td>
-                <td class="subject"><a href="#">4 Files</a></td>
-                <td class="time">16:32 AM</td>
-              </tr>
-              <tr class="read">
-                                  <td class="action"><input type="checkbox" /></td>
-                <td class="action"><i class="fa fa-star-o"></i></td>
-                <td class="action"><i class="fa fa-bookmark"></i></td>
-                <td class="name"><a href="#">Altynai Zhumakhanova</a></td>
-                <td class="subject"><a href="#">Picture of a sleeping bear</a></td>
-                <td class="time">06:31 PM</td>
-              </tr>
-              <tr>
-                                  <td class="action"><input type="checkbox" /></td>
-                <td class="action"><i class="fa fa-star"></i></td>
-                <td class="action"><i class="fa fa-bookmark-o"></i></td>
-                <td class="name"><a href="#">Amina Mazova</a></td>
-                <td class="subject"><a href="#">Request to sign and participate in given comptetion</a></td>
-                <td class="time">08:30 PM</td>
-              </tr>
-              <tr class="read">
-                <td class="action"><input type="checkbox" /></td>
-                <td class="action"><i class="fa fa-star"></i></td>
-                <td class="action"><i class="fa fa-bookmark"></i></td>
-                <td class="name"><a href="#">AITU MAILING SYSTEM</a></td>
-                <td class="subject"><a href="#">VACCINATION STATUS</a></td>
-                <td class="time">07:00 PM</td>
-              </tr>
-              <tr>
-                <td class="action"><input type="checkbox" /></td>
-                <td class="action"><i class="fa fa-star"></i></td>
-                <td class="action"><i class="fa fa-bookmark-o"></i></td>
-                <td class="name"><a href="#">AITU MAILING SYSTEM</a></td>
-                <td class="subject"><a href="#">List of the students granted a fee</a></td>
-                <td class="time">06:59 PM</td>
-              </tr>
-              
-            </tbody>
-          </table>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" style="margin-left: 2rem;"><img src="./Images/aitu-logo_.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link active joly" aria-current="page" href="Profile.html"><h1>Profile</h1></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active joly" aria-current="page" href="News.html"><h1>News</h1></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active joly" aria-current="page" href="Mail.html"><h1>Messenger</h1></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active joly" aria-current="page" href="Academic materials.html"><h1>Academic materials</h1></a>
+              </li>
 
+            </ul>
           </div>
         </div>
+      </nav>
+      
+        
+<div class="Main_Page">
+  <div class="top"></div>
+    <div class="box">
+      <div class="left">
+        <div class="topp">
+            <h1>Messages</h1> 
+        </div>
+          <div class="search">
+            <input class="in" type="text" placeholder="   Search your Buddy">
+                <div class="ico">
+                     <img src="search-png-icon-14.jpg" class="icon1">
+                </div>
+          </div>
+          <ul class = "AlmUl">
+            <li>
+              <div class="friend">
+                <div class="img_name">
+                <img src="ami.jpg" class="ava">
+                <div>
+                <h5>Amina</h5>
+                <p>Don't forget!</p></div>
+                </div>
+                <div class="time"><p class="p">Now</p></div>
+              </div>
+            </li><li>
+              <div class="friend">
+                <div class="img_name">
+                <img src="bek.jpg" class="ava">
+                <div>
+                <h5>Bektas</h5>
+                <p><span>Typing...</span></p></div>
+                </div>
+                <div class="time"><p class="p">Today</p></div>
+              </div>
+            </li><li>
+              <div class="friend">
+                <div class="img_name">
+                <img src="ask.jpg" class="ava">
+                <div>
+                <h5>Askar</h5>
+                <p>Please vote)</p></div>
+                </div>
+                <div class="time"><p class="p">Today</p></div>
+              </div>
+            </li><li>
+              <div class="friend">
+                <div class="img_name">
+                <img src="azi.jpg" class="ava">
+                <div>
+                <h5>Aziza</h5>
+                <p>I haven't any change..</p></div>
+                </div>
+                <div class="time"><p class="p">Yesterday</p></div>
+              </div>
+            </li><li>
+              <div class="friend">
+                <div class="img_name">
+                <img src="sgz.jpg" class="ava">
+                <div>
+                <h5>Sultangazy</h5>
+                <p>I have already uploaded(</p></div>
+                </div>
+                <div class="time"><p class="p">Yesterday</p></div>
+              </div>
+            </li><li>
+              <div class="friend">
+                <div class="img_name">
+                <img src="arina.jpg" class="ava">
+                <div>
+                <h5>Arina</h5>
+                <p>Is this your essay?</p></div>
+                </div>
+                <div class="time"><p class="p">Two days ago</p></div>
+              </div>
+            </li><li>
+              <div class="friend">
+                <div class="img_name">
+                <img src="eld.jpg" class="ava">
+                <div>
+                <h5>Professor</h5>
+                <p>Good job!!!</p></div>
+                </div>
+                <div class="time"><p class="p">Two days ago</p></div>
+              </div>
+            </li>
+          </ul>
+      </div>
+    <div class="right">
+         <div class="right_top">
+          <div class="img_name">
+            
+            <div>
+            <h5>Amina</h5>
+            <p>online</p></div>
+            </div>
+            
+         </div>
+         <div class="mid">
+           <div class="me">
+             <p>Hello, what kind of endterm?</p>
+           </div>
+           <div class="u">
+             <p>Hello, it will be def and mcq</p>
+           </div>
+           <div class="me">
+             <p>Hello, what kind of endterm?</p>
+           </div>
+           <div class="u">
+             <p>Hello, it will be def and mcq</p>
+           </div>
+           <div class="me">
+             <p>Hello, what kind of endterm?</p>
+           </div>
+           <div class="u">
+             <p>Hello, it will be def and mcq</p>
+           </div>
+           <div class="me">
+             <p>Hello, what kind of endterm?</p>
+           </div>
+           <div class="u">
+             <p>Hello, it will be def and mcq</p>
+           </div>
+           <div class="me">
+             <p>Hello, what kind of endterm?</p>
+           </div>
+           <div class="u">
+             <p>Hello, it will be def and mcq</p>
+           </div>
+         </div>
+         <div class="btm">
+           <form>
+             <div>+</div>
+             <input type="text" name="" placeholder=" Message..."
+             class="in2">
+             <div class="icon3"><img src="send.png" class="send"></div>
+            </form>
+         </div>
     </div>
+    </div>
+</div>
+</div>
 </body>
 </html>
 <!--
